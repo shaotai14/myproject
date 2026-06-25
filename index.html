@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>光影瞬间 | 摄影工作室</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">光影瞬间</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">首页</a></li>
+        <li><a href="#gallery">作品集</a></li>
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#contact">联系方式</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 首屏 Hero -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">用镜头捕捉<br>生活中的每一束光</h1>
+      <p class="hero-subtitle">风光 · 人像 · 街头 · 旅行</p>
+      <a href="#gallery" class="btn-primary">
+        探索作品
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- 作品集 -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-container">
+      <h2 class="section-title">作品集</h2>
+      <p class="section-subtitle">每一张照片，都是一个故事</p>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="landscape">风光</button>
+        <button class="filter-btn" data-filter="portrait">人像</button>
+        <button class="filter-btn" data-filter="street">街头</button>
+        <button class="filter-btn" data-filter="travel">旅行</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- 风光 -->
+        <div class="gallery-item" data-category="landscape">
+          <img src="https://picsum.photos/seed/landscape1/800/600" alt="山间晨雾" loading="lazy">
+          <div class="item-overlay">
+            <h3>山间晨雾</h3>
+            <p>黄山 · 2024</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="landscape">
+          <img src="https://picsum.photos/seed/landscape2/800/1000" alt="日落海岸" loading="lazy">
+          <div class="item-overlay">
+            <h3>日落海岸</h3>
+            <p>霞浦 · 2024</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="landscape">
+          <img src="https://picsum.photos/seed/landscape3/800/600" alt="雪山倒影" loading="lazy">
+          <div class="item-overlay">
+            <h3>雪山倒影</h3>
+            <p>川西 · 2023</p>
+          </div>
+        </div>
+        <!-- 人像 -->
+        <div class="gallery-item" data-category="portrait">
+          <img src="https://picsum.photos/seed/portrait1/800/1000" alt="夏日少女" loading="lazy">
+          <div class="item-overlay">
+            <h3>夏日少女</h3>
+            <p>大理 · 2024</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait">
+          <img src="https://picsum.photos/seed/portrait2/800/600" alt="光影之间" loading="lazy">
+          <div class="item-overlay">
+            <h3>光影之间</h3>
+            <p>上海 · 2024</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait">
+          <img src="https://picsum.photos/seed/portrait3/800/1000" alt="回眸" loading="lazy">
+          <div class="item-overlay">
+            <h3>回眸</h3>
+            <p>成都 · 2023</p>
+          </div>
+        </div>
+        <!-- 街头 -->
+        <div class="gallery-item" data-category="street">
+          <img src="https://picsum.photos/seed/street1/800/600" alt="城市脉搏" loading="lazy">
+          <div class="item-overlay">
+            <h3>城市脉搏</h3>
+            <p>东京 · 2024</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="street">
+          <img src="https://picsum.photos/seed/street2/800/600" alt="雨夜" loading="lazy">
+          <div class="item-overlay">
+            <h3>雨夜</h3>
+            <p>香港 · 2023</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="street">
+          <img src="https://picsum.photos/seed/street3/800/1000" alt="老街故事" loading="lazy">
+          <div class="item-overlay">
+            <h3>老街故事</h3>
+            <p>重庆 · 2024</p>
+          </div>
+        </div>
+        <!-- 旅行 -->
+        <div class="gallery-item" data-category="travel">
+          <img src="https://picsum.photos/seed/travel1/800/600" alt="冰岛极光" loading="lazy">
+          <div class="item-overlay">
+            <h3>冰岛极光</h3>
+            <p>冰岛 · 2024</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="travel">
+          <img src="https://picsum.photos/seed/travel2/800/600" alt="沙漠驼影" loading="lazy">
+          <div class="item-overlay">
+            <h3>沙漠驼影</h3>
+            <p>敦煌 · 2023</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="travel">
+          <img src="https://picsum.photos/seed/travel3/800/1000" alt="威尼斯黄昏" loading="lazy">
+          <div class="item-overlay">
+            <h3>威尼斯黄昏</h3>
+            <p>意大利 · 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section class="about-section" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://picsum.photos/seed/photographer/600/800" alt="摄影师" loading="lazy">
+        </div>
+        <div class="about-content">
+          <h2 class="section-title">关于我</h2>
+          <p class="about-intro">
+            你好，我是<span class="highlight">林风</span>，一名自由摄影师。
+          </p>
+          <p>
+            十年前，我第一次拿起相机，从此便爱上了用镜头记录世界的方式。
+            我相信每一帧画面都承载着独特的情感和故事——无论是壮阔的自然风光、
+            街头巷尾的人间烟火，还是旅途中那些稍纵即逝的瞬间。
+          </p>
+          <p>
+            我的作品曾发表于《国家地理》《中国摄影》等杂志，
+            也与多个品牌合作完成商业拍摄项目。如果你也热爱影像，
+            欢迎与我联系，一起创造属于你的光影故事。
+          </p>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">年摄影经验</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">完成项目</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">30+</span>
+              <span class="stat-label">合作品牌</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section class="contact-section" id="contact">
+    <div class="section-container">
+      <h2 class="section-title">联系方式</h2>
+      <p class="section-subtitle">期待与你的每一次相遇</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <h4>电话</h4>
+              <p>+86 138-0000-1234</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <h4>邮箱</h4>
+              <p>hello@linfeng.photo</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <h4>工作室地址</h4>
+              <p>上海市静安区南京西路 1888 号</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="你的名字" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="电子邮箱" required>
+          </div>
+          <div class="form-group">
+            <select id="subject">
+              <option value="">拍摄类型</option>
+              <option value="portrait">人像写真</option>
+              <option value="wedding">婚礼跟拍</option>
+              <option value="commercial">商业摄影</option>
+              <option value="travel">旅行跟拍</option>
+              <option value="other">其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="说说你的想法..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">发送消息</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-quote">"摄影是将瞬间变成永恒的魔法。"</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+        <a href="#" aria-label="微博"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.18 14.77A8.49 8.49 0 0 1 11 20c-4.69 0-8.5-3.94-8.5-8.8A8.66 8.66 0 0 1 10.5 2.5"/><path d="M15 6.4c2.6 1.1 4.5 3.7 4.7 6.8"/><path d="M11.5 10.5c.9.9 1.2 2.1 1.2 3.3"/><circle cx="15" cy="16" r="2"/></svg></a>
+        <a href="#" aria-label="小红书"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 8h3l2 5 2-5h3"/></svg></a>
+        <a href="#" aria-label="500px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14 14 0 0 0 0 20"/><path d="M2 12h20"/></svg></a>
+      </div>
+      <p class="copyright">&copy; 2024 光影瞬间摄影工作室. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 灯箱 -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <img src="" alt="" class="lightbox-img" id="lightboxImg">
+    <button class="lightbox-next" id="lightboxNext">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
